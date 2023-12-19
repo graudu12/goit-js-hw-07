@@ -18,10 +18,10 @@ function createBoxes(amount) {
     divBox.style.cssText = `width: ${size}px; height: ${size}px; background-color: ${getRandomHexColor()}`;
     boxes.insertAdjacentElement('beforeend', divBox);
   }
-  formInput.value = '';
+  formInput.value = Number('');
 }
 btnCreate.addEventListener('click', () => {
-  if (1 <= formInput.value <= 100) {
+  if (1 >= formInput.value <= 100) {
     createBoxes(formInput.value);
   }
 });
